@@ -1,0 +1,205 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a2c65cfdad.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title> Your Cart - Lets Style</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block content %}
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="navbar">
+
+
+            <div class="logo">
+                <a href="home.html"><img src="{% static 'images/logo-white.png'%}" width='200px' > </a>
+                    </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="signin.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="{% static 'images/cart.png'%}" width="30px" height="30px" > </a>
+                <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle() ">
+
+
+        </div>
+
+    </div>
+
+    <div class="small-container cart-page" id="cart">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src={% static "images/Nike - SB.jpg"%}>
+                        <div>
+                            <p>Nike - SB Dunk Low Blue</p>
+                            <small>Price : $80.00</small>
+                            <br>
+                            <button class="btn btn-danger" type="button">Remove</button>
+                        </div>
+                    </div>
+
+
+                </td>
+                <td><input type="number" value="1"> </td>
+                <td>$80.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src={% static "images/Nike - Blazer Mid '77.jpg"%}>
+                        
+                        <div>
+                            <p>Nike - Blazer Mid '77</p>
+                            <small>Price : $90.00</small>
+                            <br>
+                            <button class="btn btn-danger" type="button">Remove</button>
+                        </div>
+                    </div>
+
+
+                </td>
+                <td><input type="number" value="1"> </td>
+                <td>$90.00</td>
+
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Total</td>
+                    <td>$170.00</td>
+                </tr>
+
+                <tr>
+                    <td>Tax</td>
+                    <td>$30.00</td>
+                </tr>
+                <tr>
+                    <td>Sub total</td>
+                    <td>$200.00</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer ">
+
+        <div class="container ">
+            <div class="row ">
+
+
+                <div class="footer-col-1 ">
+                    <img src={%static "images/logo-white.png" %}>
+                    <p>Buy Us and have Fun</p>
+                </div>
+
+                <div class="footer-col-2 ">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <i class="fa fa-facebook-square "></i>
+                        <i class="fa fa-instagram "></i>
+                        <i class="fa fa-twitter "></i>
+                        <i class="fa fa-youtube-play "></i>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright ">@ Copyright-Lets Style-2022</p>
+
+
+        </div>
+    </div>
+
+    
+
+
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+
+            }
+
+        }
+    </script>
+
+    <script>
+        let
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+{% endblock %}

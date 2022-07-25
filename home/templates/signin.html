@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a2c65cfdad.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title> Login  Registration - Lets Style</title>
+  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+
+            <div class="navbar">
+
+
+                <div class="logo">
+                    <a href="home.html"><img src="{% static 'images/logo-white.png'%}" width='200px' > </a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="signin.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="{% static 'images/cart.png'%}" width="30px" height="30px" >
+                </a>
+                <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle() ">
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span>Login</span>
+
+                            <small>
+                            <p> Please enter your credentials to login.</p>
+                        </small>
+
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn-login">Login</button>
+                            <a href="">Forgot Password ?</a><br>
+
+                            <a href={%"signup.html"%}>New Here? Create an account</a>
+                        </form>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="footer ">
+
+        <div class="container ">
+            <div class="row ">
+
+
+                <div class="footer-col-1 ">
+                    <img src={%static "images/logo-white.png" %}>
+                    <p>Buy Us and Have Fun</p>
+                </div>
+
+                <div class="footer-col-2 ">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <i class="fa fa-facebook-square "></i>
+                        <i class="fa fa-instagram "></i>
+                        <i class="fa fa-twitter "></i>
+                        <i class="fa fa-youtube-play "></i>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright ">@ Copyright-Lets Style-2022</p>
+
+
+        </div>
+    </div>
+
+    
+
+
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+
+            }
+
+        }
+    </script>
+
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+
+            RegFrom.style.transform = "translateX(0px)";
+            LoginFrom.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+
+        function login() {
+            RegFrom.style.transform = "translateX(300px)";
+            LoginFrom.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+
+    <script?>
+
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
